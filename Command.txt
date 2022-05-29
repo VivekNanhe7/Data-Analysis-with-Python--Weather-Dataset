@@ -1,0 +1,73 @@
+
+$ git config --global user.name Vivek
+
+$ git config --global user.email "viveknanhe117@gmail.com"
+
+$ touch .gitignore
+
+$ git init
+Initialized empty Git repository in V:/Code-New Era/Vivek/DS1/.git/
+
+$ git add .
+
+$ git commit -m "Initial commit"
+
+$ git status
+
+$ git remote add origin git@github.com:VivekNanhe7/Data-Analysis-with-Python--Weather-Dataset.git (Github mdhli link ssh wali)
+
+$ git push origin master
+
+#Error[
+The authenticity of host 'github.com (13.234.210.38)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.]
+
+Solution[
+$ ssh-keygen -t rsa -b 4096 -C "viveknanhe117@gmail.com"
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/vivek/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/vivek/.ssh/id_rsa
+
+Your [public key has been saved in /c/Users/vivek/.ssh/id_rsa.pub]
+
+The key fingerprint is:
+SHA256:oQfzWq1I2L+uU1ykv395osBNVNYOopKyq9/r/OP5MeE viveknanhe117@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|              o. |
+|          . .o. .|
+|      o .+ ... o |
+|     o.=+oo.    .|
+|    . ++S+. o    |
+|     ..*oo.+ .   |
+|      ooo o.E  . |
+|      oo .oo o+ .|
+|    .oo=B++++o o |
++----[SHA256]-----+
+
+                     ]
+$ cat /c/Users/vivek/.ssh/id_rsa.pub  (paste here the public key, cat use karun)
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDt+U8sSUNdLmnLQomY+As2R2KRC1l3FHw+6k2C0IvKm66BvE1JWGus5mLYaFWcmTw3Wmd0/c91mL4xaCTyEoZCnLOsFG5aN14gV4Wz1Gop/FDCrReRXC2UPzq7g2T6rLcm/h60omcg52PnDbYTJFCaTYeJ1+NyyKK/2oImu61vR31XasnEShW+pvM5zEfWIjUCRoRrUP9PBhSKfPBnpL8Ezxm9woqn/6uyaUW2uwGc6KbYO17iiE3+QRAivRNVu5P3MuYL1S2qE3YdbwDeohbIT2/kpcrJ0BRWLnvsUtzuuAILhd42lVZPVPJokQIKi7BzlULwacvVKW0TFE8Vvzik2Cno918u8fENpcpBUfcX6oJ9ZLGrVXhzEygNwzV+yVbHImWbqPL4XdxihAdxIvG148ZksxH2U6V6pP0cgo/m3NXzChi5ocNxC3RG2J9yFHbd6lF1anAVahjeU0h/S7HbhfM6DJ3Mibb8o2w+3SsZg9kgel71Wsu2Qd/xrzzvWs4tPhe6kjGl0Un1DgEDxPC84RmVR08s6q+YSv/JmDGMVNYnj/f+MhKHNMFpEdOafmDpvoTCoQlgHnUiP/ZSfDEAHO2OOCtVPYg+0S9pNLYk4oE8rlQYllNKqFQPknbqUQNwymd/xjEMukuHmE9APhXovVgED872AxnPSYd80EhQMQ== viveknanhe117@gmail.com
+
+$ git push origin master
+
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.41 KiB | 206.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:VivekNanhe7/Data-Analysis-with-Python--Weather-Dataset.git
+ * [new branch]      master -> master
+
